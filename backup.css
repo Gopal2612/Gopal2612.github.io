@@ -1,0 +1,485 @@
+html, body{
+	font-family: sans-serif !important;
+}
+body{
+	line-height: 1.64;
+	font-size: 15px;
+
+}
+
+a{
+	text-decoration: none !important;
+	cursor: pointer;
+	padding: 0px;
+	background-color: transparent;
+	color: #fff;
+	font-size: 14px;
+}
+
+.navbar{
+    border: 0px;
+	width: 115px;
+	position: fixed;;
+	right: 4%;
+	top: 80px;
+/*	background: white !important;*/
+	padding: 0px;
+}
+.navbar .navbar-collapse {
+    padding: 0px;
+    max-height: none;
+}
+.navbar .list{
+	float: none;
+	width: 115px;
+}
+.list{
+	margin: 0px;
+}
+.navbar .list li{
+	display: block;
+	float: none;
+	height: 80px;
+}
+
+.navbar .list li a {
+	display: block;
+	height: 80px;
+	text-align: center;
+	padding-top: 30px;
+	font-weight: 600;
+	color: #FFFFFF;
+}
+.background-white{
+	background: #FFFFFF;
+}
+.container{
+	max-width: 1280px;
+	padding: 40px 180px;
+}
+h2{
+	font-size: 54px;
+	text-align: center;
+	font-weight: 300;
+	color: #22A39F;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+p.lead{
+	text-align: center;
+	color: #727878;
+	font-weight: 400;
+}
+hr{
+	margin: 35px 0px;
+	border-color: #727878;
+	opacity: 0.2;
+}
+#profile .row div{
+	margin-bottom: 20px;
+}
+h3{
+	font-size: 28px;
+	color: #22A39F;
+	margin-bottom: 20px;
+	font-weight: 200;
+}
+#profile .row div img{
+	width: 100%;
+	max-width: 246px;
+	height: auto;
+	border-radius: 50%;
+}
+#profile .socialicon{
+	margin-top: 40px;
+}
+.socialicon{
+	display: inline-block;
+}
+ul{
+	margin: 0px;
+	padding: 0px;
+}
+.socialicon li{
+	margin: 5px 0px 30px 0px;
+}
+.socialicon li{
+	list-style: none;
+	float: left;
+}
+.socialicon li a{
+	font-size: 22px;
+	text-align: center;
+	width: 30px;
+	height: 30px;
+	padding: 10px;
+	border-radius: 50%;
+	color: #22A39F;
+}
+.socialicon li .fa{
+	padding: 4px 10px;
+	margin-left: 5px;
+	border-radius: 3px;
+}
+.background{
+	background: #F3EFE0;
+}
+.candidatos{
+	position: relative;
+	margin-bottom: 15px;
+}
+.candidatos .parcial {
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+}
+.candidatos .parcial .info {
+    position: relative;
+}
+.candidatos .parcial .info .nome {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 15px;
+    font-weight: 600;
+    opacity: 0.9;
+}
+.candidatos .parcial .info .percentagem-num {
+    position: absolute;
+    top: 0;
+    right: 45px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.background .candidatos .parcial .progressbar {
+    background: rgba(199, 198, 198, 0.6);
+}
+.candidatos .parcial .progressbar {
+    position: relative;
+    width: 90%;
+    height: 7px;
+    margin: 30px 0 2px;
+    border-radius: 10px;
+}
+.candidatos .parcial .percentagem {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 7px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: #0bceaf;
+    -webkit-transition: 3s all;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color:dimgray;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.fun {
+  padding: 10px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.fun::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -12px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 18px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 20px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #202026;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 20px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #202026 transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -13px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color:#F3EFE0;
+  position: relative;
+  border-radius: 6px;
+  margin: 0px 20px 0px 20px;
+/*  color: #fff;*/
+}
+
+.footer{
+	margin-bottom: 60px;
+}
+.footer .address{
+	padding: 30px;
+	text-align: center;
+	margin-bottom: 30px;
+	border-radius: 4px;
+	box-shadow: -1rem 0 3rem #000;
+}
+.footer .address .eachicon{
+	margin-bottom: 30px;
+}
+.footer .address .eachicon .fa{
+	text-align: center;
+    width: 100px;
+    height: 100px;
+    border: 1px solid;
+    border-radius: 50%;
+    line-height: 100px;
+    font-size: 20px;
+    border-color: #0bceaf;
+}
+.footer .address h4{
+	margin-bottom: 20px;
+}
+.footer .address address{
+	margin-bottom: 0;
+}
+.footer{
+	color: #fff;
+}
+.section{
+	padding: 30px 0;
+}
+.background-color{
+	background-color: #100e17;
+}
+.dark{
+	background-color: #202026;
+}
+
+#msgSubmit {
+    margin-top: 20px;
+    font-size: 22px;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+.form-control{
+	background-color: transparent;
+/*	border-color: transparent;*/
+	margin-bottom: 20px;
+	height: 50px;
+	line-height: 50px;
+}
+.section .form-control{
+	color: #fff;
+}
+.section .contact-message{
+	background-color: transparent;
+	border-radius: 4px;
+	margin-bottom: 20px;
+	width: 100%;
+	padding: 20px;
+	outline: 0;
+	color: #fff;
+}
+.btn.btn-fill{
+	background-color: #0bceaf;
+	color: #fff;
+}
+
+.btn:last-child{
+	margin-right: 0px !important;
+}
+.btn{
+	padding: 8px 30px;
+	font-weight: bold;
+	border-radius: 20px;
+}
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:50%;
+    position:relative;
+    height:380px;
+	top: 20px;
+}
+.map-responsive iframe{
+    left:0;
+    top:10px;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+.mh-map{
+	padding: 0px;
+	margin-top: 10px;
+/*	height: 400px;*/
+	width: 100%;
+}
+
+p.love{
+	color: #fff;
+	font-weight: 300;
+	font-size: 1rem;
+	
+}
+.love .fa{
+	color: tomato;
+}
+p.love a{
+	font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+
+/*media query*/
+
+@media (max-width:991px){
+	.container{
+		padding: 60px 30px;
+		min-width: 280px;
+	}
+	.navbar{
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		z-index: 999;
+	}
+	.navbar-dark .navbar-toggler{
+		position: relative;
+		margin-bottom: 8px;
+		padding: 7px 8px;
+		margin-left: 15px;
+		margin-top: 8px;
+		border: none;
+		outline: none;
+	}	
+	.navbar .list{
+		width: 100%;
+	}
+	.navbar .list li{
+		height: 65px;
+	}
+	.navbar .list li a{
+		padding-top: 10px;
+		height: 65px;
+		font-size: 20px;
+	}
+	
+	.footer .address .eachicon .fa{
+		width: 60px;
+		height: 60px;
+		line-height: 60px;
+	}
+
+}
+
+@media screen and (max-width: 767px) {
+
+	#profile .row{
+		text-align: center;
+	}
+	.content{
+		margin: 0;
+	}
+	
+	
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .fun {
+  width: 100%;
+  padding-left: 60px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .fun::before {
+  left: 50px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #202026 transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 18px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0%;
+  }
+}
+
+
+
+
+
